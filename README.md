@@ -1,6 +1,8 @@
 # Recaptcha
 
-Library is prepared for support Google Recaptcha service to Vapor applications. First you need to obtain a secret key from: https://www.google.com/recaptcha/admin 
+Library is prepared for support Google Recaptcha service to Vapor applications. First you need to obtain a secret key from: https://www.google.com/recaptcha/admin.
+
+Most part of the code was originally created here: [gotranseo/vapor-recaptcha](https://github.com/gotranseo/vapor-recaptcha).
 
 ## Installation
 
@@ -46,7 +48,7 @@ if recaptchaIsEnabled == "1" {
 In your controller, you can do something like this:
 
 ```swift
-let captchaToken = ... //value from a submitted form
+let captchaToken = ... // value from web application
 let googleCaptcha = try req.make(GoogleCaptcha.self)
 return googleCaptcha.validate(captchaFormResponse: captchaToken).flatMap { success in 
     if success {
@@ -56,3 +58,4 @@ return googleCaptcha.validate(captchaFormResponse: captchaToken).flatMap { succe
     }
 }
 ```
+
