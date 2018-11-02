@@ -9,7 +9,7 @@ Most part of the code was originally created here: [gotranseo/vapor-recaptcha](h
 Library is available through Swift Package Manager. To install it, simply add the following to your `Package.swift` file:
 
 ```swift
-.package(url: "https://github.com/Letterer/Recaptcha.git", from: "1.0.0")
+.package(url: "https://github.com/Letterer/Recaptcha.git", from: "1.0.1")
 ```
 
 ## Usage

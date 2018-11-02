@@ -12,7 +12,7 @@ public struct MockCaptcha: Captcha {
 
     private let container: Container
 
-    init(container: Container) {
+    public init(container: Container) {
         self.container = container
     }
 
