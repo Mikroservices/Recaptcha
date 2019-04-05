@@ -1,5 +1,7 @@
 # Recaptcha
 
+[![Build Status](https://travis-ci.org/Mikroservices/Recaptcha.svg?branch=master)](https://travis-ci.org/Mikroservices/Recaptcha) [![Swift 4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)](ttps://developer.apple.com/swift/) [![Platforms OS X | Linux](https://img.shields.io/badge/Platforms-OS%20X%20%7C%20Linux%20-lightgray.svg?style=flat)](https://developer.apple.com/swift/)
+
 Library is prepared for support Google Recaptcha service to Vapor applications. First you need to obtain a secret key from: https://www.google.com/recaptcha/admin.
 
 Most part of the code was originally created here: [gotranseo/vapor-recaptcha](https://github.com/gotranseo/vapor-recaptcha).
@@ -9,7 +11,7 @@ Most part of the code was originally created here: [gotranseo/vapor-recaptcha](h
 Library is available through Swift Package Manager. To install it, simply add the following to your `Package.swift` file:
 
 ```swift
-.package(url: "https://github.com/Letterer/Recaptcha.git", from: "1.0.1")
+.package(url: "https://github.com/Mikroservices/Recaptcha.git", from: "1.0.1")
 ```
 
 ## Usage
