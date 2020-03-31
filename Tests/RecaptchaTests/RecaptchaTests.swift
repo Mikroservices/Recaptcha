@@ -1,15 +1,21 @@
 import XCTest
+import Vapor
 @testable import Recaptcha
 
 final class RecaptchaTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(Recaptcha().text, "Hello, World!")
+    func testValidationWithoutSecretKeyShouldReturnTrue() throws {
+        let application = Application()
+        defer {
+            application.shutdown()
+        }
+        
+        let request = Request(application: application, on: application.eventLoopGroup.next())
+        try request.validate(captchaFormResponse: "123").flatMapThrowing { result in
+            XCTAssertTrue(result)
+        }.wait()
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testValidationWithoutSecretKeyShouldReturnTrue", testValidationWithoutSecretKeyShouldReturnTrue),
     ]
 }
