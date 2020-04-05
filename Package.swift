@@ -8,8 +8,7 @@ let package = Package(
        .macOS(.v10_15)
     ],
     products: [
-        .library(name: "Recaptcha", targets: ["Recaptcha"]),
-        .library(name: "RecaptchaTests", targets: ["RecaptchaTests"])
+        .library(name: "Recaptcha", targets: ["Recaptcha"])
     ],
     dependencies: [
         // 💧 A server-side Swift web framework. 
