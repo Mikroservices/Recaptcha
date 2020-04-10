@@ -12,7 +12,7 @@ let package = Package(
     ],
     dependencies: [
         // 💧 A server-side Swift web framework. 
-        .package(url: "https://github.com/vapor/vapor.git", .upToNextMajor(from: "4.0.0-rc.3.12")),
+        .package(url: "https://github.com/vapor/vapor.git", .upToNextMajor(from: "4.0.1")),
     ],
     targets: [
         .target(name: "Recaptcha", dependencies: [
