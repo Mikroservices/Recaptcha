@@ -14,8 +14,15 @@ final class RecaptchaTests: XCTestCase {
             XCTAssertTrue(result)
         }.wait()
     }
-
-    static var allTests = [
-        ("testValidationWithoutSecretKeyShouldReturnTrue", testValidationWithoutSecretKeyShouldReturnTrue),
-    ]
+    
+    func testValidationWithoutSecretKeyShouldReturnTrueAync() async throws {
+        let application = Application()
+        defer {
+            application.shutdown()
+        }
+        
+        let request = Request(application: application, on: application.eventLoopGroup.next())
+        let result = try await request.validate(captchaFormResponse: "123")
+        XCTAssertTrue(result)
+    }
 }
